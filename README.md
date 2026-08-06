@@ -47,6 +47,8 @@ AI-SCHOOL-NTO là dự án nâng cấp Website Trường THCS Nguyễn Trường
 ### Trang quản trị
 ![Quản trị](docs/admin.png)
 
-## Tác giả
+## Tác giả:
 
-Lê Thiện Đức
+ Lê Thiện Đức — Giáo viên, Trường THCS Nguyễn Trường Tộ, Eawer, Đắk Lắk | Điện thoại: 0976762220
+<img width="1459" height="66" alt="image" src="https://github.com/user-attachments/assets/82b3e5d6-81da-41ae-82d9-d744cb53fca6" />
+
