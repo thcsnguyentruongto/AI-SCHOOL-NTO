@@ -1,6 +1,6 @@
 # AI-SCHOOL-NTO
 Nâng cấp Website Trường THCS Nguyễn Trường Tộ thành nền tảng Trường học thông minh ứng dụng Trí tuệ nhân tạo (AI)
-# AI-SCHOOL-NTO
+# TỔNG QUAN GIẢI PHÁP AI SCHOO-NTO: Là mô hình nâng cấp Website Trường THCS Nguyễn Trường Tộ,Eawer,Daklak violet thành nền tảng trường học thông minh ứng dụng trí tuệ nhân tạo (AI). AI SCHOOL tích hợp trợ lý AI, thư viện học liệu số, công cụ hỗ trợ giảng dạy và các tiện ích giáo dục trên cùng một nền tảng, theo hướng “ Trường học thông minh ứng dụng AI”. AI được thiết kế để khai thác dữ liệu của website: Biến các AI từ công cụ hỏi – đáp thành “ trợ lý dùng chung cho cả hệ sinh thái nhà trường”. Nói đơn giản: - Chat GPT riêng lẻ→ người dùng phải biết tự hỏi gì. - Còn ý tưởng của AI SCHOOL→ đưa AI đến đúng nơi GV và HS,PH cần dùng trong hoạt động hằng ngày của trường. -Tích hợp các AI từ các nền công nghệ khác nhau trên cùng một giao diện còn tối ưu hóa cho người dung lượng miễn phí ( free). -Tận dụng hạ tầng hiện có; Sản phẩm vận hành ổn định -Giải pháp hướng đến xây dựng môi trường giáo dục số hiện đại, Chi phí triển khai thấp, không cần đầu tư máy chủ riêng. -Có khả năng mở rộng và nhân rộng tại các cơ sở giáo dục khác. 
 
 ## Giao diện hệ thống
 
