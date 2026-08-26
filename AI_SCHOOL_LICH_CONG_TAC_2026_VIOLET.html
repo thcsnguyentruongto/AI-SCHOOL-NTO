@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI SCHOOL - Lịch công tác nhà trường 2026</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#edf8f6;font-family:Segoe UI,Arial,sans-serif;color:#173d45}
+.wrap{max-width:1100px;margin:20px auto;padding:12px}
+.card{background:linear-gradient(145deg,#fff,#eefaf8);border:1px solid #d6ebe7;border-radius:26px;box-shadow:0 18px 45px rgba(0,80,80,.15);overflow:hidden}
+.head{padding:25px;background:linear-gradient(135deg,#063f43,#087f73);color:#fff}
+.brand{display:flex;gap:14px;align-items:center}
+.robot{width:58px;height:58px;border-radius:17px;background:rgba(255,255,255,.13);display:grid;place-items:center;font-size:31px}
+h1{font-size:25px;margin:0;font-weight:800}
+.sub{font-size:13px;opacity:.82;margin-top:4px}
+.nav{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;padding:15px;background:#ffffffee;border-bottom:1px solid #dcecea}
+.nav a{display:block;text-decoration:none;color:#087f73;background:#fff;border:1px solid #d7ebe8;border-radius:10px;padding:8px 11px;font-weight:700;font-size:13px;box-shadow:0 3px 9px #0000000c}
+.nav a:hover{background:#087f73;color:#fff}
+.month{display:none;padding:18px 20px 22px}
+.month:target{display:block}
+#thang01{display:block}
+.title{text-align:center;font-size:23px;font-weight:800;color:#063f43;margin:2px 0 5px}
+.note{text-align:center;color:#6a858a;font-size:12px;margin-bottom:13px}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.wd{text-align:center;font-size:13px;font-weight:800;padding:8px;color:#57777d}
+.wd:first-child{color:#e53935}.wd:last-child{color:#1976d2}
+.day{min-height:92px;background:#fff;border:1px solid #e2eeec;border-radius:13px;padding:7px;position:relative}
+.num{font-size:18px;font-weight:800}
+.lunar{font-size:9px;color:#80969a;margin-top:2px}
+.event{margin-top:6px;background:#e9f7f4;color:#176a63;border-radius:7px;padding:4px 5px;font-size:9px;font-weight:700;line-height:1.2}
+.holiday{background:#fff0f0;color:#c62828}
+.sat .num{color:#1976d2}.sun .num{color:#e53935}
+.empty{background:transparent;border:0}
+.footer{text-align:center;padding:13px 18px 20px;color:#6a858a;font-size:12px}
+@media(max-width:650px){
+ .wrap{padding:5px;margin:8px auto}.head{padding:17px}.robot{width:45px;height:45px;font-size:24px}h1{font-size:19px}
+ .nav{gap:4px;padding:9px}.nav a{font-size:11px;padding:7px 8px}
+ .month{padding:12px 6px 16px}.grid{gap:3px}.day{min-height:68px;padding:5px;border-radius:8px}.num{font-size:14px}.lunar{font-size:7px}.event{font-size:7px;padding:3px}
+ .wd{font-size:10px;padding:6px 2px}
+}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+<div class="head"><div class="brand"><div class="robot">🤖</div><div><h1>AI SCHOOL</h1><div class="sub">LỊCH CÔNG TÁC NHÀ TRƯỜNG • NĂM 2026</div></div></div></div>
+<div class="nav">
+<a href="#thang01">T1</a>
+<a href="#thang02">T2</a>
+<a href="#thang03">T3</a>
+<a href="#thang04">T4</a>
+<a href="#thang05">T5</a>
+<a href="#thang06">T6</a>
+<a href="#thang07">T7</a>
+<a href="#thang08">T8</a>
+<a href="#thang09">T9</a>
+<a href="#thang10">T10</a>
+<a href="#thang11">T11</a>
+<a href="#thang12">T12</a>
+<a href="#thang01">⌂ Đầu năm</a></div>
+<section id="thang01" class="month">
+<div class="title">Tháng 01 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 13/11</div>
+<div class="event holiday">🎉 Tết Dương lịch</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 14/11</div>
+</div>
+<div class="day sat"><div class="num">3</div><div class="lunar">🌙 15/11</div>
+</div>
+<div class="day sun"><div class="num">4</div><div class="lunar">🌙 16/11</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 17/11</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 18/11</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 19/11</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 20/11</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 21/11</div>
+</div>
+<div class="day sat"><div class="num">10</div><div class="lunar">🌙 22/11</div>
+</div>
+<div class="day sun"><div class="num">11</div><div class="lunar">🌙 23/11</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 24/11</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 25/11</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 26/11</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 27/11</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 28/11</div>
+</div>
+<div class="day sat"><div class="num">17</div><div class="lunar">🌙 29/11</div>
+</div>
+<div class="day sun"><div class="num">18</div><div class="lunar">🌙 30/11</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 1/12</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 2/12</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 3/12</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 4/12</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 5/12</div>
+</div>
+<div class="day sat"><div class="num">24</div><div class="lunar">🌙 6/12</div>
+</div>
+<div class="day sun"><div class="num">25</div><div class="lunar">🌙 7/12</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 8/12</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 9/12</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 10/12</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 11/12</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 12/12</div>
+</div>
+<div class="day sat"><div class="num">31</div><div class="lunar">🌙 13/12</div>
+</div>
+</div></section>
+<section id="thang02" class="month">
+<div class="title">Tháng 02 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day sun"><div class="num">1</div><div class="lunar">🌙 14/12</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 15/12</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 16/12</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 17/12</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 18/12</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 19/12</div>
+</div>
+<div class="day sat"><div class="num">7</div><div class="lunar">🌙 20/12</div>
+</div>
+<div class="day sun"><div class="num">8</div><div class="lunar">🌙 21/12</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 22/12</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 23/12</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 24/12</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 25/12</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 26/12</div>
+</div>
+<div class="day sat"><div class="num">14</div><div class="lunar">🌙 27/12</div>
+</div>
+<div class="day sun"><div class="num">15</div><div class="lunar">🌙 28/12</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 29/12</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 1/12</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 2/12</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 3/12</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 4/12</div>
+</div>
+<div class="day sat"><div class="num">21</div><div class="lunar">🌙 5/12</div>
+</div>
+<div class="day sun"><div class="num">22</div><div class="lunar">🌙 6/12</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 7/12</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 8/12</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 9/12</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 10/12</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 11/12</div>
+</div>
+<div class="day sat"><div class="num">28</div><div class="lunar">🌙 12/12</div>
+</div>
+</div></section>
+<section id="thang03" class="month">
+<div class="title">Tháng 03 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day sun"><div class="num">1</div><div class="lunar">🌙 13/12</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 14/12</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 15/12</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 16/12</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 17/12</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 18/12</div>
+</div>
+<div class="day sat"><div class="num">7</div><div class="lunar">🌙 19/12</div>
+</div>
+<div class="day sun"><div class="num">8</div><div class="lunar">🌙 20/12</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 21/12</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 22/12</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 23/12</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 24/12</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 25/12</div>
+</div>
+<div class="day sat"><div class="num">14</div><div class="lunar">🌙 26/12</div>
+</div>
+<div class="day sun"><div class="num">15</div><div class="lunar">🌙 27/12</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 28/12</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 29/12</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 30/12</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 1/2</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 2/2</div>
+</div>
+<div class="day sat"><div class="num">21</div><div class="lunar">🌙 3/2</div>
+</div>
+<div class="day sun"><div class="num">22</div><div class="lunar">🌙 4/2</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 5/2</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 6/2</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 7/2</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 8/2</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 9/2</div>
+</div>
+<div class="day sat"><div class="num">28</div><div class="lunar">🌙 10/2</div>
+</div>
+<div class="day sun"><div class="num">29</div><div class="lunar">🌙 11/2</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 12/2</div>
+</div>
+<div class="day"><div class="num">31</div><div class="lunar">🌙 13/2</div>
+</div>
+</div></section>
+<section id="thang04" class="month">
+<div class="title">Tháng 04 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 14/2</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 15/2</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 16/2</div>
+</div>
+<div class="day sat"><div class="num">4</div><div class="lunar">🌙 17/2</div>
+</div>
+<div class="day sun"><div class="num">5</div><div class="lunar">🌙 18/2</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 19/2</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 20/2</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 21/2</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 22/2</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 23/2</div>
+</div>
+<div class="day sat"><div class="num">11</div><div class="lunar">🌙 24/2</div>
+</div>
+<div class="day sun"><div class="num">12</div><div class="lunar">🌙 25/2</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 26/2</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 27/2</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 28/2</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 29/2</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 1/2</div>
+</div>
+<div class="day sat"><div class="num">18</div><div class="lunar">🌙 2/2</div>
+</div>
+<div class="day sun"><div class="num">19</div><div class="lunar">🌙 3/2</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 4/2</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 5/2</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 6/2</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 7/2</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 8/2</div>
+</div>
+<div class="day sat"><div class="num">25</div><div class="lunar">🌙 9/2</div>
+</div>
+<div class="day sun"><div class="num">26</div><div class="lunar">🌙 10/2</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 11/2</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 12/2</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 13/2</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 14/2</div>
+<div class="event holiday">🇻🇳 30/4 – Giải phóng miền Nam</div>
+</div>
+</div></section>
+<section id="thang05" class="month">
+<div class="title">Tháng 05 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 15/2</div>
+<div class="event holiday">🌏 1/5 – Quốc tế Lao động</div>
+</div>
+<div class="day sat"><div class="num">2</div><div class="lunar">🌙 16/2</div>
+</div>
+<div class="day sun"><div class="num">3</div><div class="lunar">🌙 17/2</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 18/2</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 19/2</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 20/2</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 21/2</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 22/2</div>
+</div>
+<div class="day sat"><div class="num">9</div><div class="lunar">🌙 23/2</div>
+</div>
+<div class="day sun"><div class="num">10</div><div class="lunar">🌙 24/2</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 25/2</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 26/2</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 27/2</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 28/2</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 29/2</div>
+</div>
+<div class="day sat"><div class="num">16</div><div class="lunar">🌙 30/2</div>
+</div>
+<div class="day sun"><div class="num">17</div><div class="lunar">🌙 1/4</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 2/4</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 3/4</div>
+<div class="event holiday">⭐ Ngày sinh Chủ tịch Hồ Chí Minh</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 4/4</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 5/4</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 6/4</div>
+</div>
+<div class="day sat"><div class="num">23</div><div class="lunar">🌙 7/4</div>
+</div>
+<div class="day sun"><div class="num">24</div><div class="lunar">🌙 8/4</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 9/4</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 10/4</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 11/4</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 12/4</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 13/4</div>
+</div>
+<div class="day sat"><div class="num">30</div><div class="lunar">🌙 14/4</div>
+</div>
+<div class="day sun"><div class="num">31</div><div class="lunar">🌙 15/4</div>
+</div>
+</div></section>
+<section id="thang06" class="month">
+<div class="title">Tháng 06 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 16/4</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 17/4</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 18/4</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 19/4</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 20/4</div>
+</div>
+<div class="day sat"><div class="num">6</div><div class="lunar">🌙 21/4</div>
+</div>
+<div class="day sun"><div class="num">7</div><div class="lunar">🌙 22/4</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 23/4</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 24/4</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 25/4</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 26/4</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 27/4</div>
+</div>
+<div class="day sat"><div class="num">13</div><div class="lunar">🌙 28/4</div>
+</div>
+<div class="day sun"><div class="num">14</div><div class="lunar">🌙 29/4</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 1/4</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 2/4</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 3/4</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 4/4</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 5/4</div>
+</div>
+<div class="day sat"><div class="num">20</div><div class="lunar">🌙 6/4</div>
+</div>
+<div class="day sun"><div class="num">21</div><div class="lunar">🌙 7/4</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 8/4</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 9/4</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 10/4</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 11/4</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 12/4</div>
+</div>
+<div class="day sat"><div class="num">27</div><div class="lunar">🌙 13/4</div>
+</div>
+<div class="day sun"><div class="num">28</div><div class="lunar">🌙 14/4</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 15/4</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 16/4</div>
+</div>
+</div></section>
+<section id="thang07" class="month">
+<div class="title">Tháng 07 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 17/4</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 18/4</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 19/4</div>
+</div>
+<div class="day sat"><div class="num">4</div><div class="lunar">🌙 20/4</div>
+</div>
+<div class="day sun"><div class="num">5</div><div class="lunar">🌙 21/4</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 22/4</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 23/4</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 24/4</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 25/4</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 26/4</div>
+</div>
+<div class="day sat"><div class="num">11</div><div class="lunar">🌙 27/4</div>
+</div>
+<div class="day sun"><div class="num">12</div><div class="lunar">🌙 28/4</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 29/4</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 1/5</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 2/5</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 3/5</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 4/5</div>
+</div>
+<div class="day sat"><div class="num">18</div><div class="lunar">🌙 5/5</div>
+</div>
+<div class="day sun"><div class="num">19</div><div class="lunar">🌙 6/5</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 7/5</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 8/5</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 9/5</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 10/5</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 11/5</div>
+</div>
+<div class="day sat"><div class="num">25</div><div class="lunar">🌙 12/5</div>
+</div>
+<div class="day sun"><div class="num">26</div><div class="lunar">🌙 13/5</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 14/5</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 15/5</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 16/5</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 17/5</div>
+</div>
+<div class="day"><div class="num">31</div><div class="lunar">🌙 18/5</div>
+</div>
+</div></section>
+<section id="thang08" class="month">
+<div class="title">Tháng 08 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day sat"><div class="num">1</div><div class="lunar">🌙 19/5</div>
+</div>
+<div class="day sun"><div class="num">2</div><div class="lunar">🌙 20/5</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 21/5</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 22/5</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 23/5</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 24/5</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 25/5</div>
+</div>
+<div class="day sat"><div class="num">8</div><div class="lunar">🌙 26/5</div>
+</div>
+<div class="day sun"><div class="num">9</div><div class="lunar">🌙 27/5</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 28/5</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 29/5</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 30/5</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 1/6</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 2/6</div>
+</div>
+<div class="day sat"><div class="num">15</div><div class="lunar">🌙 3/6</div>
+</div>
+<div class="day sun"><div class="num">16</div><div class="lunar">🌙 4/6</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 5/6</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 6/6</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 7/6</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 8/6</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 9/6</div>
+</div>
+<div class="day sat"><div class="num">22</div><div class="lunar">🌙 10/6</div>
+</div>
+<div class="day sun"><div class="num">23</div><div class="lunar">🌙 11/6</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 12/6</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 13/6</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 14/6</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 15/6</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 16/6</div>
+</div>
+<div class="day sat"><div class="num">29</div><div class="lunar">🌙 17/6</div>
+</div>
+<div class="day sun"><div class="num">30</div><div class="lunar">🌙 18/6</div>
+</div>
+<div class="day"><div class="num">31</div><div class="lunar">🌙 19/6</div>
+</div>
+</div></section>
+<section id="thang09" class="month">
+<div class="title">Tháng 09 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 20/6</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 21/6</div>
+<div class="event holiday">🇻🇳 Quốc khánh</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 22/6</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 23/6</div>
+</div>
+<div class="day sat"><div class="num">5</div><div class="lunar">🌙 24/6</div>
+</div>
+<div class="day sun"><div class="num">6</div><div class="lunar">🌙 25/6</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 26/6</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 27/6</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 28/6</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 29/6</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 1/7</div>
+</div>
+<div class="day sat"><div class="num">12</div><div class="lunar">🌙 2/7</div>
+</div>
+<div class="day sun"><div class="num">13</div><div class="lunar">🌙 3/7</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 4/7</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 5/7</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 6/7</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 7/7</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 8/7</div>
+</div>
+<div class="day sat"><div class="num">19</div><div class="lunar">🌙 9/7</div>
+</div>
+<div class="day sun"><div class="num">20</div><div class="lunar">🌙 10/7</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 11/7</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 12/7</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 13/7</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 14/7</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 15/7</div>
+</div>
+<div class="day sat"><div class="num">26</div><div class="lunar">🌙 16/7</div>
+</div>
+<div class="day sun"><div class="num">27</div><div class="lunar">🌙 17/7</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 18/7</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 19/7</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 20/7</div>
+</div>
+</div></section>
+<section id="thang10" class="month">
+<div class="title">Tháng 10 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 21/7</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 22/7</div>
+</div>
+<div class="day sat"><div class="num">3</div><div class="lunar">🌙 23/7</div>
+</div>
+<div class="day sun"><div class="num">4</div><div class="lunar">🌙 24/7</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 25/7</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 26/7</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 27/7</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 28/7</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 29/7</div>
+</div>
+<div class="day sat"><div class="num">10</div><div class="lunar">🌙 1/8</div>
+</div>
+<div class="day sun"><div class="num">11</div><div class="lunar">🌙 2/8</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 3/8</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 4/8</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 5/8</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 6/8</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 7/8</div>
+</div>
+<div class="day sat"><div class="num">17</div><div class="lunar">🌙 8/8</div>
+</div>
+<div class="day sun"><div class="num">18</div><div class="lunar">🌙 9/8</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 10/8</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 11/8</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 12/8</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 13/8</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 14/8</div>
+</div>
+<div class="day sat"><div class="num">24</div><div class="lunar">🌙 15/8</div>
+</div>
+<div class="day sun"><div class="num">25</div><div class="lunar">🌙 16/8</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 17/8</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 18/8</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 19/8</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 20/8</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 21/8</div>
+</div>
+<div class="day sat"><div class="num">31</div><div class="lunar">🌙 22/8</div>
+</div>
+</div></section>
+<section id="thang11" class="month">
+<div class="title">Tháng 11 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day sun"><div class="num">1</div><div class="lunar">🌙 23/8</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 24/8</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 25/8</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 26/8</div>
+</div>
+<div class="day"><div class="num">5</div><div class="lunar">🌙 27/8</div>
+</div>
+<div class="day"><div class="num">6</div><div class="lunar">🌙 28/8</div>
+</div>
+<div class="day sat"><div class="num">7</div><div class="lunar">🌙 29/8</div>
+</div>
+<div class="day sun"><div class="num">8</div><div class="lunar">🌙 30/8</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 1/9</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 2/9</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 3/9</div>
+</div>
+<div class="day"><div class="num">12</div><div class="lunar">🌙 4/9</div>
+</div>
+<div class="day"><div class="num">13</div><div class="lunar">🌙 5/9</div>
+</div>
+<div class="day sat"><div class="num">14</div><div class="lunar">🌙 6/9</div>
+</div>
+<div class="day sun"><div class="num">15</div><div class="lunar">🌙 7/9</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 8/9</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 9/9</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 10/9</div>
+</div>
+<div class="day"><div class="num">19</div><div class="lunar">🌙 11/9</div>
+</div>
+<div class="day"><div class="num">20</div><div class="lunar">🌙 12/9</div>
+<div class="event holiday">👨‍🏫 Ngày Nhà giáo Việt Nam</div>
+</div>
+<div class="day sat"><div class="num">21</div><div class="lunar">🌙 13/9</div>
+</div>
+<div class="day sun"><div class="num">22</div><div class="lunar">🌙 14/9</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 15/9</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 16/9</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 17/9</div>
+</div>
+<div class="day"><div class="num">26</div><div class="lunar">🌙 18/9</div>
+</div>
+<div class="day"><div class="num">27</div><div class="lunar">🌙 19/9</div>
+</div>
+<div class="day sat"><div class="num">28</div><div class="lunar">🌙 20/9</div>
+</div>
+<div class="day sun"><div class="num">29</div><div class="lunar">🌙 21/9</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 22/9</div>
+</div>
+</div></section>
+<section id="thang12" class="month">
+<div class="title">Tháng 12 / 2026</div>
+<div class="note">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+<div class="grid">
+<div class="wd">CN</div>
+<div class="wd">T2</div>
+<div class="wd">T3</div>
+<div class="wd">T4</div>
+<div class="wd">T5</div>
+<div class="wd">T6</div>
+<div class="wd">T7</div>
+<div class="day empty"></div>
+<div class="day empty"></div>
+<div class="day"><div class="num">1</div><div class="lunar">🌙 23/9</div>
+</div>
+<div class="day"><div class="num">2</div><div class="lunar">🌙 24/9</div>
+</div>
+<div class="day"><div class="num">3</div><div class="lunar">🌙 25/9</div>
+</div>
+<div class="day"><div class="num">4</div><div class="lunar">🌙 26/9</div>
+</div>
+<div class="day sat"><div class="num">5</div><div class="lunar">🌙 27/9</div>
+</div>
+<div class="day sun"><div class="num">6</div><div class="lunar">🌙 28/9</div>
+</div>
+<div class="day"><div class="num">7</div><div class="lunar">🌙 29/9</div>
+</div>
+<div class="day"><div class="num">8</div><div class="lunar">🌙 30/9</div>
+</div>
+<div class="day"><div class="num">9</div><div class="lunar">🌙 1/10</div>
+</div>
+<div class="day"><div class="num">10</div><div class="lunar">🌙 2/10</div>
+</div>
+<div class="day"><div class="num">11</div><div class="lunar">🌙 3/10</div>
+</div>
+<div class="day sat"><div class="num">12</div><div class="lunar">🌙 4/10</div>
+</div>
+<div class="day sun"><div class="num">13</div><div class="lunar">🌙 5/10</div>
+</div>
+<div class="day"><div class="num">14</div><div class="lunar">🌙 6/10</div>
+</div>
+<div class="day"><div class="num">15</div><div class="lunar">🌙 7/10</div>
+</div>
+<div class="day"><div class="num">16</div><div class="lunar">🌙 8/10</div>
+</div>
+<div class="day"><div class="num">17</div><div class="lunar">🌙 9/10</div>
+</div>
+<div class="day"><div class="num">18</div><div class="lunar">🌙 10/10</div>
+</div>
+<div class="day sat"><div class="num">19</div><div class="lunar">🌙 11/10</div>
+</div>
+<div class="day sun"><div class="num">20</div><div class="lunar">🌙 12/10</div>
+</div>
+<div class="day"><div class="num">21</div><div class="lunar">🌙 13/10</div>
+</div>
+<div class="day"><div class="num">22</div><div class="lunar">🌙 14/10</div>
+</div>
+<div class="day"><div class="num">23</div><div class="lunar">🌙 15/10</div>
+</div>
+<div class="day"><div class="num">24</div><div class="lunar">🌙 16/10</div>
+</div>
+<div class="day"><div class="num">25</div><div class="lunar">🌙 17/10</div>
+</div>
+<div class="day sat"><div class="num">26</div><div class="lunar">🌙 18/10</div>
+</div>
+<div class="day sun"><div class="num">27</div><div class="lunar">🌙 19/10</div>
+</div>
+<div class="day"><div class="num">28</div><div class="lunar">🌙 20/10</div>
+</div>
+<div class="day"><div class="num">29</div><div class="lunar">🌙 21/10</div>
+</div>
+<div class="day"><div class="num">30</div><div class="lunar">🌙 22/10</div>
+</div>
+<div class="day"><div class="num">31</div><div class="lunar">🌙 23/10</div>
+</div>
+</div></section>
+<div class="footer">💡 Phiên bản này không dùng JavaScript nên phù hợp với khối HTML của các nền tảng có chặn &lt;script&gt;, trong đó có thể gặp Violet. • Năm 2026</div>
+</div></div>
+</body></html>
