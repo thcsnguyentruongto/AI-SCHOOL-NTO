@@ -1,0 +1,184 @@
+<!-- ===== DỰ BÁO THỜI TIẾT ĐẮK LẮK ===== -->
+<div id="weather-daklak" style="
+  max-width:900px;
+  margin:15px auto;
+  padding:18px;
+  border-radius:18px;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#e8f5e9,#e3f2fd);
+  box-shadow:0 4px 15px rgba(0,0,0,0.12);
+">
+
+  <h2 style="text-align:center;margin-top:0;">
+    🌤️ DỰ BÁO THỜI TIẾT ĐẮK LẮK
+  </h2>
+
+  <div id="weather-today" style="
+    text-align:center;
+    font-size:18px;
+    margin-bottom:15px;
+  ">
+    ⏳ Đang tải dữ liệu thời tiết...
+  </div>
+
+  <div id="weather-days" style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:10px;
+  "></div>
+
+  <div style="
+    text-align:center;
+    margin-top:15px;
+    font-size:12px;
+    opacity:.75;
+  ">
+    Dữ liệu thời tiết: Open-Meteo
+  </div>
+</div>
+
+<script>
+(async function(){
+
+  // Tọa độ khu vực Buôn Ma Thuột - Đắk Lắk
+  const LAT = 12.6667;
+  const LON = 108.0378;
+
+  const url =
+    "https://api.open-meteo.com/v1/forecast" +
+    "?latitude=" + LAT +
+    "&longitude=" + LON +
+    "&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m" +
+    "&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max" +
+    "&timezone=Asia%2FHo_Chi_Minh" +
+    "&forecast_days=7";
+
+  const icons = {
+    0:"☀️",
+    1:"🌤️",
+    2:"⛅",
+    3:"☁️",
+    45:"🌫️",
+    48:"🌫️",
+    51:"🌦️",
+    53:"🌦️",
+    55:"🌧️",
+    61:"🌧️",
+    63:"🌧️",
+    65:"🌧️",
+    71:"🌨️",
+    73:"🌨️",
+    75:"❄️",
+    80:"🌦️",
+    81:"🌧️",
+    82:"⛈️",
+    95:"⛈️",
+    96:"⛈️",
+    99:"⛈️"
+  };
+
+  const descriptions = {
+    0:"Trời quang",
+    1:"Ít mây",
+    2:"Có mây",
+    3:"Nhiều mây",
+    45:"Sương mù",
+    48:"Sương mù",
+    51:"Mưa phùn",
+    53:"Mưa phùn",
+    55:"Mưa phùn",
+    61:"Mưa nhẹ",
+    63:"Mưa vừa",
+    65:"Mưa lớn",
+    80:"Mưa rào",
+    81:"Mưa rào",
+    82:"Mưa rào lớn",
+    95:"Dông",
+    96:"Dông",
+    99:"Dông mạnh"
+  };
+
+  const dayNames = [
+    "CN","T2","T3","T4","T5","T6","T7"
+  ];
+
+  try {
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    // Thời tiết hiện tại
+    const current = data.current;
+
+    document.getElementById("weather-today").innerHTML =
+      "<div style='font-size:42px'>" +
+      (icons[current.weather_code] || "🌤️") +
+      "</div>" +
+      "<b>Nhiệt độ hiện tại: " +
+      Math.round(current.temperature_2m) +
+      "°C</b><br>" +
+      (descriptions[current.weather_code] || "Thời tiết") +
+      "<br>" +
+      "💧 Độ ẩm: " + current.relative_humidity_2m + "% &nbsp; " +
+      "💨 Gió: " + Math.round(current.wind_speed_10m) + " km/h";
+
+    // Dự báo 7 ngày
+    let html = "";
+
+    for(let i=0;i<data.daily.time.length;i++){
+
+      const date = new Date(data.daily.time[i] + "T00:00:00");
+
+      const day = dayNames[date.getDay()];
+
+      const code = data.daily.weather_code[i];
+
+      html += `
+        <div style="
+          background:white;
+          border-radius:14px;
+          padding:12px;
+          text-align:center;
+          box-shadow:0 2px 8px rgba(0,0,0,.08);
+        ">
+
+          <b>${i === 0 ? "Hôm nay" : day}</b>
+
+          <div style="font-size:32px;margin:8px 0">
+            ${icons[code] || "🌤️"}
+          </div>
+
+          <div style="font-size:13px">
+            ${descriptions[code] || "Thời tiết"}
+          </div>
+
+          <div style="margin-top:8px">
+            🔥 <b>${Math.round(data.daily.temperature_2m_max[i])}°</b>
+            &nbsp;
+            ❄️ ${Math.round(data.daily.temperature_2m_min[i])}°
+          </div>
+
+          <div style="
+            margin-top:7px;
+            color:#1976d2;
+            font-size:13px;
+          ">
+            💧 ${data.daily.precipitation_probability_max[i]}% mưa
+          </div>
+
+        </div>
+      `;
+    }
+
+    document.getElementById("weather-days").innerHTML = html;
+
+  } catch(error) {
+
+    document.getElementById("weather-today").innerHTML =
+      "⚠️ Không thể tải dữ liệu thời tiết.";
+
+    console.error(error);
+  }
+
+})();
+</script>
