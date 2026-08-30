@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lịch công tác - AI SCHOOL</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef8f7;color:#123f4a}
+.calendar{max-width:760px;margin:auto;padding:14px;background:linear-gradient(180deg,#f7ffff,#e9f7f5);border-radius:16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+h1{font-size:27px;margin:0;font-weight:800;color:#073f4c}
+button{border:0;background:#0d6878;color:#fff;border-radius:9px;padding:8px 12px;font-size:14px;cursor:pointer}
+button:hover{opacity:.88}
+.legend{font-size:13px;color:#55727a;text-align:center;margin:4px 0 12px}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-bottom:5px}
+.week div{text-align:center;font-weight:700;font-size:13px;padding:5px}
+.week .sun{color:#e52b2b}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.day{min-height:86px;background:#fff;border:1px solid #d6e8e7;border-radius:10px;padding:7px;position:relative;overflow:hidden}
+.day.empty{background:transparent;border:0}
+.day.today{outline:3px solid #18a6b8}
+.num{font-size:18px;font-weight:800;color:#083f4d}
+.sunnum{color:#e72b2b}.satnum{color:#176cc2}
+.lunar{font-size:10px;color:#536e75;margin-top:7px}
+.lunar.first{color:#d06a00;font-weight:700}
+.event{font-size:10px;color:#8b3d6e;margin-top:5px;line-height:1.2}
+.monthbar{display:flex;justify-content:center;align-items:center;gap:12px;margin-bottom:5px}
+.monthbar button{padding:5px 9px}
+.note{margin-top:12px;text-align:center;font-size:12px;color:#55727a;line-height:1.45}
+@media(max-width:520px){
+ .calendar{padding:8px;border-radius:10px}
+ h1{font-size:21px}
+ .day{min-height:76px;padding:5px}
+ .num{font-size:16px}.lunar{font-size:9px}
+ .event{font-size:9px}
+}
+</style>
+</head>
+<body>
+<div class="calendar">
+  <div class="top">
+    <button onclick="changeMonth(-1)">‹</button>
+    <div class="monthbar">
+      <h1 id="title">Tháng 8 / 2026</h1>
+    </div>
+    <button onclick="changeMonth(1)">›</button>
+  </div>
+
+  <div class="legend">📅 Dương lịch • 🌙 Âm lịch • 📌 Ngày lễ / sự kiện</div>
+
+  <div class="week">
+    <div class="sun">CN</div><div>T2</div><div>T3</div><div>T4</div>
+    <div>T5</div><div>T6</div><div>T7</div>
+  </div>
+  <div id="days" class="days"></div>
+
+  <div class="note">
+    Âm lịch Việt Nam (múi giờ GMT+7).<br>
+    <b>Kiểm tra chuẩn:</b> 31/08/2026 = <b>19/07/2026 âm lịch</b>.
+  </div>
+</div>
+
+<script>
+// Các mốc MÙNG 1 âm lịch đã kiểm chứng cho năm Bính Ngọ 2026.
+// Đây là lịch âm Việt Nam, dùng múi giờ GMT+7.
+// 1/1/2026 âm = 17/02/2026 dương.
+// Các mốc tiếp theo: 19/03, 17/04, 17/05, 15/06, 14/07,
+// 13/08, 11/09, 10/10, 09/11, 09/12/2026.
+const lunarAnchors = [
+  ["2026-02-17",1,1,2026],
+  ["2026-03-19",1,2,2026],
+  ["2026-04-17",1,3,2026],
+  ["2026-05-17",1,4,2026],
+  ["2026-06-15",1,5,2026],
+  ["2026-07-14",1,6,2026],
+  ["2026-08-13",1,7,2026],
+  ["2026-09-11",1,8,2026],
+  ["2026-10-10",1,9,2026],
+  ["2026-11-09",1,10,2026],
+  ["2026-12-09",1,11,2026],
+  ["2027-01-07",1,12,2026]
+];
+
+// Mốc trước Tết để hiển thị đúng phần tháng 1 và đầu tháng 2/2026.
+const previousAnchors = [
+  ["2026-01-19",1,12,2025],
+  ["2026-02-17",1,1,2026]
+];
+
+// Số ngày của các tháng âm lịch 2026.
+// 1=30 ngày, 0=29 ngày.
+const lunarMonthLengths = {
+  1:30, 2:29, 3:30, 4:29, 5:29, 6:30,
+  7:29, 8:29, 9:30, 10:30, 11:29, 12:30
+};
+
+function utcDate(y,m,d){
+  return new Date(Date.UTC(y,m-1,d));
+}
+function diffDays(a,b){
+  return Math.round((a-b)/86400000);
+}
+
+function lunarFromSolar(y,m,d){
+  const target = utcDate(y,m,d);
+
+  // Trước Tết 2026: xử lý theo mốc tháng 12/2025.
+  if(target < utcDate(2026,2,17)){
+    const start = utcDate(2026,1,19); // 1/12/2025
+    let n = diffDays(target,start) + 1;
+    if(n >= 1 && n <= 29) return {day:n,month:12,year:2025};
+    if(target >= utcDate(2026,2,17)){
+      return {day:1,month:1,year:2026};
+    }
+    // 30/12/2025 rơi vào 16/02/2026.
+    return {day:n,month:12,year:2025};
+  }
+
+  let idx = -1;
+  for(let i=0;i<lunarAnchors.length;i++){
+    if(target >= utcDate(...lunarAnchors[i][0].split("-").map(Number))) idx=i;
+    else break;
+  }
+  if(idx<0) return null;
+
+  const a=lunarAnchors[idx];
+  const start=utcDate(...a[0].split("-").map(Number));
+  let offset=diffDays(target,start);
+  let month=a[2], year=a[3], day=a[1];
+
+  while(offset>0){
+    const len=lunarMonthLengths[month] || 29;
+    if(day < len){day++;offset--;}
+    else{
+      day=1;month++;
+      if(month>12){month=1;year++;}
+      offset--;
+    }
+  }
+  return {day,month,year};
+}
+
+const events = {
+  "2026-01-01":"Tết Dương lịch",
+  "2026-02-17":"Tết Nguyên đán",
+  "2026-04-30":"30/4",
+  "2026-05-01":"Quốc tế Lao động",
+  "2026-09-02":"Quốc khánh",
+  "2026-11-20":"Ngày Nhà giáo Việt Nam"
+};
+
+let viewYear=2026, viewMonth=8;
+
+function pad(n){return String(n).padStart(2,"0")}
+function key(y,m,d){return `${y}-${pad(m)}-${pad(d)}`}
+
+function render(){
+  document.getElementById("title").textContent=`Tháng ${pad(viewMonth)} / ${viewYear}`;
+  const box=document.getElementById("days");
+  box.innerHTML="";
+
+  const first=utcDate(viewYear,viewMonth,1);
+  const startCol=first.getUTCDay(); // CN=0
+  const total=new Date(Date.UTC(viewYear,viewMonth,0)).getUTCDate();
+
+  for(let i=0;i<startCol;i++){
+    const e=document.createElement("div"); e.className="day empty"; box.appendChild(e);
+  }
+
+  const now=new Date();
+  const todayKey=key(now.getFullYear(),now.getMonth()+1,now.getDate());
+
+  for(let d=1;d<=total;d++){
+    const el=document.createElement("div");
+    el.className="day";
+
+    const k=key(viewYear,viewMonth,d);
+    if(k===todayKey) el.classList.add("today");
+
+    const wd=new Date(Date.UTC(viewYear,viewMonth-1,d)).getUTCDay();
+    const num=document.createElement("div");
+    num.className="num "+(wd===0?"sunnum":wd===6?"satnum":"");
+    num.textContent=d;
+    el.appendChild(num);
+
+    const lunar=lunarFromSolar(viewYear,viewMonth,d);
+    if(lunar){
+      const ld=document.createElement("div");
+      ld.className="lunar"+(lunar.day===1?" first":"");
+      ld.textContent=lunar.day===1
+        ? `🌙 1/${lunar.month}`
+        : `🌙 ${lunar.day}/${lunar.month}`;
+      el.appendChild(ld);
+    }
+
+    if(events[k]){
+      const ev=document.createElement("div");
+      ev.className="event";
+      ev.textContent="📌 "+events[k];
+      el.appendChild(ev);
+    }
+    box.appendChild(el);
+  }
+}
+
+function changeMonth(step){
+  viewMonth+=step;
+  if(viewMonth<1){viewMonth=12;viewYear--}
+  if(viewMonth>12){viewMonth=1;viewYear++}
+  render();
+}
+render();
+</script>
+</body>
+</html>
