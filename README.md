@@ -47,8 +47,8 @@ AI-SCHOOL-NTO là mô hình XÂY DỰNG NỀN TẢNG HỖ TRỢ HỌC TẬP VÀ 
 ### Trang quản trị
 ![Quản trị](docs/admin.png)
 
-## Tác giả:
+## Tác giả: Lê Thiện Đức — Giáo viên, Trường THCS  Hồ Tùng Mậu, Eawer, Đắk Lắk | Điện thoại: 0976762220.
+ 
+<img width="1396" height="66" alt="image" src="https://github.com/user-attachments/assets/5ee0a045-7a57-44e8-9920-4c6bfacf6135" />
 
- Lê Thiện Đức — Giáo viên, Trường THCS  Hồ Tùng Mậu, Eawer, Đắk Lắk | Điện thoại: 0976762220.
- <img width="1459" height="66" alt="image" src="https://github.com/user-attachments/assets/82b3e5d6-81da-41ae-82d9-d744cb53fca6" />
 
